@@ -1,0 +1,100 @@
+2356  execve("./encdrv", ["./encdrv", "testcases/testcase.4", "output/output.4"], 0x7ffce6555a98 /* 18 vars */) = 0
+2356  brk(NULL)                         = 0x56b2517e6000
+2356  arch_prctl(0x3001 /* ARCH_??? */, 0x7fffa71135f0) = -1 EINVAL (Invalid argument)
+2356  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7cf8ce8f0000
+2356  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+2356  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+2356  newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+2356  mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7cf8ce8e8000
+2356  close(3)                          = 0
+2356  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+2356  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+2356  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+2356  pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+2356  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+2356  newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+2356  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+2356  mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7cf8ce6bf000
+2356  mprotect(0x7cf8ce6e7000, 2023424, PROT_NONE) = 0
+2356  mmap(0x7cf8ce6e7000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7cf8ce6e7000
+2356  mmap(0x7cf8ce87c000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7cf8ce87c000
+2356  mmap(0x7cf8ce8d5000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7cf8ce8d5000
+2356  mmap(0x7cf8ce8db000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7cf8ce8db000
+2356  close(3)                          = 0
+2356  mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7cf8ce6bc000
+2356  arch_prctl(ARCH_SET_FS, 0x7cf8ce6bc740) = 0
+2356  set_tid_address(0x7cf8ce6bca10)   = 2356
+2356  set_robust_list(0x7cf8ce6bca20, 24) = 0
+2356  rseq(0x7cf8ce6bd0e0, 0x20, 0, 0x53053053) = 0
+2356  mprotect(0x7cf8ce8d5000, 16384, PROT_READ) = 0
+2356  mprotect(0x56b250cc0000, 4096, PROT_READ) = 0
+2356  mprotect(0x7cf8ce92a000, 8192, PROT_READ) = 0
+2356  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+2356  munmap(0x7cf8ce8e8000, 29392)     = 0
+2356  pipe2([3, 4], 0)                  = 0
+2356  openat(AT_FDCWD, "testcases/testcase.4", O_RDONLY) = 5
+2356  openat(AT_FDCWD, "output/output.4", O_WRONLY|O_CREAT, 0666) = 6
+2356  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7cf8ce6bca10) = 2357
+2356  close(3)                          = 0
+2356  read(5, "all: encdrv encrypt decrypt\n\nenc"..., 1000) = 212
+2357  set_robust_list(0x7cf8ce6bca20, 24 <unfinished ...>
+2356  write(4, "212\n", 4)              = 4
+2357  <... set_robust_list resumed>)    = 0
+2356  write(4, "all: encdrv encrypt decrypt\n\nenc"..., 212) = 212
+2356  read(5, "", 1000)                 = 0
+2356  close(5)                          = 0
+2357  close(1 <unfinished ...>
+2356  close(6 <unfinished ...>
+2357  <... close resumed>)              = 0
+2356  <... close resumed>)              = 0
+2357  dup(6)                            = 1
+2357  close(0 <unfinished ...>
+2356  exit_group(0 <unfinished ...>
+2357  <... close resumed>)              = 0
+2356  <... exit_group resumed>)         = ?
+2357  dup(3)                            = 0
+2357  close(4)                          = 0
+2356  +++ exited with 0 +++
+2357  execve("./encrypt", ["encrypt"], 0x7fffa71137d8 /* 18 vars */) = 0
+2357  brk(NULL)                         = 0x5bf5f324d000
+2357  arch_prctl(0x3001 /* ARCH_??? */, 0x7ffeba7d5840) = -1 EINVAL (Invalid argument)
+2357  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77008fc59000
+2357  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+2357  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 4
+2357  newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+2357  mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 4, 0) = 0x77008fc51000
+2357  close(4)                          = 0
+2357  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 4
+2357  read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+2357  pread64(4, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+2357  pread64(4, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+2357  pread64(4, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+2357  newfstatat(4, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+2357  pread64(4, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+2357  mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x77008fa28000
+2357  mprotect(0x77008fa50000, 2023424, PROT_NONE) = 0
+2357  mmap(0x77008fa50000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x28000) = 0x77008fa50000
+2357  mmap(0x77008fbe5000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x1bd000) = 0x77008fbe5000
+2357  mmap(0x77008fc3e000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x215000) = 0x77008fc3e000
+2357  mmap(0x77008fc44000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x77008fc44000
+2357  close(4)                          = 0
+2357  mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77008fa25000
+2357  arch_prctl(ARCH_SET_FS, 0x77008fa25740) = 0
+2357  set_tid_address(0x77008fa25a10)   = 2357
+2357  set_robust_list(0x77008fa25a20, 24) = 0
+2357  rseq(0x77008fa260e0, 0x20, 0, 0x53053053) = 0
+2357  mprotect(0x77008fc3e000, 16384, PROT_READ) = 0
+2357  mprotect(0x5bf5f190c000, 4096, PROT_READ) = 0
+2357  mprotect(0x77008fc93000, 8192, PROT_READ) = 0
+2357  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+2357  munmap(0x77008fc51000, 29392)     = 0
+2357  newfstatat(0, "", {st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+2357  getrandom("\xbf\xa1\x94\x91\x93\xdd\x8c\x8f", 8, GRND_NONBLOCK) = 8
+2357  brk(NULL)                         = 0x5bf5f324d000
+2357  brk(0x5bf5f326e000)               = 0x5bf5f326e000
+2357  read(0, "212\nall: encdrv encrypt decrypt\n"..., 4096) = 216
+2357  newfstatat(1, "", {st_mode=S_IFREG|0664, st_size=0, ...}, AT_EMPTY_PATH) = 0
+2357  write(1, "212\n\265\270\270\356\364\261\272\267\260\246\242\364\261\272\267\246\255\244\240\364\260\261\267\246\255\244\240\336"..., 216) = 216
+2357  read(0, "", 4096)                 = 0
+2357  exit_group(0)                     = ?
+2357  +++ exited with 0 +++

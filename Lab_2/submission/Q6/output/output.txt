@@ -1,0 +1,135 @@
+Child id 0 start
+Curr End count 1, 250000, 22044
+STR 22044
+Number of bytes: 5
+Child id 1 start
+Curr End count 250001, 500000, 19494
+STR 19494
+Number of bytes: 5
+Buf = 22044 
+Buf = 19494 
+Testcase: 1 numP: 2 Expected: 41538 Output: 41538 Serial Time: 54449 Parallel Time:33303
+Child id 0 start
+Curr End count 1, 125000, 11734
+STR 11734
+Number of bytes: 5
+Child id 1 start
+Curr End count 125001, 250000, 10310
+STR 10310
+Number of bytes: 5
+Child id 2 start
+Curr End count 250001, 375000, 9860
+STR 9860
+Number of bytes: 4
+Child id 3 start
+Curr End count 375001, 500000, 9634
+STR 9634
+Number of bytes: 4
+Buf = 11734 
+Buf = 10310 
+Buf = 9860  
+Buf = 9634  
+Testcase: 2 numP: 4 Expected: 41538 Output: 41538 Serial Time: 52424 Parallel Time:18273
+Child id 0 start
+Curr End count 1, 62500, 6275
+STR 6275
+Number of bytes: 4
+Child id 1 start
+Curr End count 62501, 125000, 5459
+STR 5459
+Number of bytes: 4
+Child id 2 start
+Curr End count 125001, 187500, 5230
+STR 5230
+Number of bytes: 4
+Child id 3 start
+Curr End count 187501, 250000, 5080
+STR 5080
+Number of bytes: 4
+Child id 4 start
+Curr End count 250001, 312500, 4948
+STR 4948
+Number of bytes: 4
+Child id 5 start
+Curr End count 312501, 375000, 4912
+STR 4912
+Number of bytes: 4
+Child id 6 start
+Curr End count 375001, 437500, 4852
+STR 4852
+Number of bytes: 4
+Child id 7 start
+Curr End count 437501, 500000, 4782
+STR 4782
+Number of bytes: 4
+Buf = 6275 
+Buf = 5459 
+Buf = 5230 
+Buf = 5080 
+Buf = 4948 
+Buf = 4912 
+Buf = 4852 
+Buf = 4782 
+Testcase: 3 numP: 8 Expected: 41538 Output: 41538 Serial Time: 53057 Parallel Time:10915
+Child id 0 start
+Curr End count 1, 1250000, 96469
+STR 96469
+Number of bytes: 5
+Child id 1 start
+Curr End count 1250001, 2500000, 86603
+STR 86603
+Number of bytes: 5
+Child id 2 start
+Curr End count 2500001, 3750000, 83645
+STR 83645
+Number of bytes: 5
+Child id 3 start
+Curr End count 3750001, 5000000, 81796
+STR 81796
+Number of bytes: 5
+Buf = 96469 
+Buf = 86603 
+Buf = 83645 
+Buf = 81796 
+Testcase: 4 numP: 4 Expected: 348513 Output: 348513 Serial Time: 1297039 Parallel Time:434621
+Child id 0 start
+Curr End count 1, 625000, 50986
+STR 50986
+Number of bytes: 5
+Child id 1 start
+Curr End count 625001, 1250000, 45483
+STR 45483
+Number of bytes: 5
+Child id 2 start
+Curr End count 1250001, 1875000, 43822
+STR 43822
+Number of bytes: 5
+Child id 3 start
+Curr End count 1875001, 2500000, 42781
+STR 42781
+Number of bytes: 5
+Child id 5 start
+Curr End count 3125001, 3750000, 41542
+STR 41542
+Number of bytes: 5
+Child id 4 start
+Curr End count 2500001, 3125000, 42103
+STR 42103
+Number of bytes: 5
+Child id 6 start
+Curr End count 3750001, 4375000, 41010
+STR 41010
+Number of bytes: 5
+Child id 7 start
+Curr End count 4375001, 5000000, 40786
+STR 40786
+Number of bytes: 5
+Buf = 50986 
+Buf = 45483 
+Buf = 43822 
+Buf = 42781 
+Buf = 42103 
+Buf = 41542 
+Buf = 41010 
+Buf = 40786 
+Testcase: 5 numP: 8 Expected: 348513 Output: 348513 Serial Time: 1284036 Parallel Time:226590

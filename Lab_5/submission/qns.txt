@@ -1,0 +1,37 @@
+Part1
+------
+
+Q1. Observe the PCB address of the processes for the provided test case #1. Compare that to any of the addresses in the user space and note down the differences.
+
+A1. There is a huge difference the PCB address in the kernel mode is much larger (7 digits in HEX), but the user space address is just 3-4 digits long.
+
+Q2. Observe the output for the provided testcase#3 and match the child-parent relationship with the code logic.
+
+A2. Parent is 0 it makes a process numbered 1, and the process 1 makes process 2 and 3.
+
+Part 2
+------
+Q1. Observe the output for the provided testcase #4. How many FDs correspond to pipes and what are their access permissions?
+
+A1. 2 FD correspond to the two ends of a pipe one is the read end and the other is the write end. 0x1 is for O_READ and 0x2 is for O_WRITE.
+
+Part 3
+-----
+
+Q1. Observe the stack segment information for testcase#2 and reason about it.
+
+A1. The heap fills from the top and the stack fills from the bottom. If we investigate the testcase#2 we see that we first expand the data segment by 2 pages which gets shown in the data segment information. The next free pointer shifts down by 2 pages. Next we see that we have defined a buf in stack which is stored at the last page. When we allocate a character 'a' 2 pages before the start of buf, it will get allocated 2 pages above the last page and hence we observe the next free pointer moving up by 2 pages for the stack segment.
+By 1 page we mean 4096 Bytes.
+
+
+
+Part 4
+------
+
+Q1. Why is the number of VM areas less than the number of mmap calls for testcase#4?
+
+A1. The way mmap works in testcase#4 is that when we pass NULL as the starting address parameter, it will look through the linked list to see if there is a hole of appropriate size as demanded by the user in between the mapped regions such that the demanded access permissions and the consecutive mapped region's permissions are the same. In such a case a new node may not be created. It is also possible that the number of nodes may be decreased when we run a mmap. Hence the number of VM areas can be less than the number of mmap calls.
+
+Q2. Why it is not so for testcase #3.
+
+A2. Since the consecutive VM area segments do not have the same access permissions, they can not be merged into a single vm_area node and hence we will make new nodes for every mmap called and hence the number of mmap calls equal the number of vm areas.

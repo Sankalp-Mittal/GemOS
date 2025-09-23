@@ -1,0 +1,133 @@
+2440  execve("./cprime", ["./cprime", "5000000", "4", "4"], 0x7ffc03fc6660 /* 18 vars */) = 0
+2440  brk(NULL)                         = 0x6355ff8d6000
+2440  arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe43f529d0) = -1 EINVAL (Invalid argument)
+2440  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74b3b3e24000
+2440  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+2440  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+2440  newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+2440  mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 3, 0) = 0x74b3b3e1c000
+2440  close(3)                          = 0
+2440  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+2440  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+2440  newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+2440  mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74b3b3d35000
+2440  mmap(0x74b3b3d43000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x74b3b3d43000
+2440  mmap(0x74b3b3dbf000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x74b3b3dbf000
+2440  mmap(0x74b3b3e1a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x74b3b3e1a000
+2440  close(3)                          = 0
+2440  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+2440  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+2440  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+2440  pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+2440  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+2440  newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+2440  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+2440  mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74b3b3b0c000
+2440  mprotect(0x74b3b3b34000, 2023424, PROT_NONE) = 0
+2440  mmap(0x74b3b3b34000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x74b3b3b34000
+2440  mmap(0x74b3b3cc9000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x74b3b3cc9000
+2440  mmap(0x74b3b3d22000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x74b3b3d22000
+2440  mmap(0x74b3b3d28000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x74b3b3d28000
+2440  close(3)                          = 0
+2440  mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74b3b3b09000
+2440  arch_prctl(ARCH_SET_FS, 0x74b3b3b09740) = 0
+2440  set_tid_address(0x74b3b3b09a10)   = 2440
+2440  set_robust_list(0x74b3b3b09a20, 24) = 0
+2440  rseq(0x74b3b3b0a0e0, 0x20, 0, 0x53053053) = 0
+2440  mprotect(0x74b3b3d22000, 16384, PROT_READ) = 0
+2440  mprotect(0x74b3b3e1a000, 4096, PROT_READ) = 0
+2440  mprotect(0x6355fdd63000, 4096, PROT_READ) = 0
+2440  mprotect(0x74b3b3e5e000, 8192, PROT_READ) = 0
+2440  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+2440  munmap(0x74b3b3e1c000, 29392)     = 0
+2440  pipe([3, 4])                      = 0
+2440  pipe([5, 6])                      = 0
+2440  pipe([7, 8])                      = 0
+2440  pipe([9, 10])                     = 0
+2440  getrandom("\x32\x84\x54\x1f\x42\xe4\x92\x23", 8, GRND_NONBLOCK) = 8
+2440  brk(NULL)                         = 0x6355ff8d6000
+2440  brk(0x6355ff8f7000)               = 0x6355ff8f7000
+2440  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x74b3b3b09a10) = 2441
+2440  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x74b3b3b09a10) = 2442
+2440  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x74b3b3b09a10) = 2443
+2440  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+2441  set_robust_list(0x74b3b3b09a20, 24 <unfinished ...>
+2443  set_robust_list(0x74b3b3b09a20, 24) = 0
+2440  <... clone resumed>, child_tidptr=0x74b3b3b09a10) = 2444
+2443  close(7 <unfinished ...>
+2440  wait4(2441,  <unfinished ...>
+2442  set_robust_list(0x74b3b3b09a20, 24 <unfinished ...>
+2443  <... close resumed>)              = 0
+2443  newfstatat(1, "",  <unfinished ...>
+2444  set_robust_list(0x74b3b3b09a20, 24 <unfinished ...>
+2443  <... newfstatat resumed>{st_mode=S_IFREG|0664, st_size=1566, ...}, AT_EMPTY_PATH) = 0
+2444  <... set_robust_list resumed>)    = 0
+2441  <... set_robust_list resumed>)    = 0
+2444  close(9 <unfinished ...>
+2441  close(3 <unfinished ...>
+2444  <... close resumed>)              = 0
+2441  <... close resumed>)              = 0
+2444  newfstatat(1, "", {st_mode=S_IFREG|0664, st_size=1566, ...}, AT_EMPTY_PATH) = 0
+2441  newfstatat(1, "", {st_mode=S_IFREG|0664, st_size=1566, ...}, AT_EMPTY_PATH) = 0
+2442  <... set_robust_list resumed>)    = 0
+2442  close(5)                          = 0
+2442  newfstatat(1, "", {st_mode=S_IFREG|0664, st_size=1566, ...}, AT_EMPTY_PATH) = 0
+2441  write(4, "96469", 5)              = 5
+2441  close(4)                          = 0
+2441  write(1, "Child id 0 start\nCurr End count "..., 79) = 79
+2441  exit_group(0)                     = ?
+2441  +++ exited with 0 +++
+2440  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 2441
+2440  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=2441, si_uid=1000, si_status=0, si_utime=18, si_stime=0} ---
+2440  wait4(2442,  <unfinished ...>
+2442  write(6, "86603", 5)              = 5
+2442  close(6)                          = 0
+2442  write(1, "Child id 1 start\nCurr End count "..., 85) = 85
+2442  exit_group(0)                     = ?
+2442  +++ exited with 0 +++
+2440  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 2442
+2440  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=2442, si_uid=1000, si_status=0, si_utime=30, si_stime=0} ---
+2440  wait4(2443,  <unfinished ...>
+2443  write(8, "83645", 5)              = 5
+2443  close(8)                          = 0
+2443  write(1, "Child id 2 start\nCurr End count "..., 85) = 85
+2443  exit_group(0)                     = ?
+2443  +++ exited with 0 +++
+2440  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 2443
+2440  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=2443, si_uid=1000, si_status=0, si_utime=38, si_stime=0} ---
+2440  wait4(2444,  <unfinished ...>
+2444  write(10, "81796", 5)             = 5
+2444  close(10)                         = 0
+2444  write(1, "Child id 3 start\nCurr End count "..., 85) = 85
+2444  exit_group(0)                     = ?
+2444  +++ exited with 0 +++
+2440  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 2444
+2440  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=2444, si_uid=1000, si_status=0, si_utime=43, si_stime=0} ---
+2440  close(4)                          = 0
+2440  read(3, "96469", 64)              = 5
+2440  newfstatat(2, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+2440  lseek(2, 0, SEEK_CUR)             = -1 ESPIPE (Illegal seek)
+2440  write(2, "read returned 5\n", 16) = 16
+2440  newfstatat(1, "", {st_mode=S_IFREG|0664, st_size=1900, ...}, AT_EMPTY_PATH) = 0
+2440  close(3)                          = 0
+2440  close(6)                          = 0
+2440  read(5, "86603", 64)              = 5
+2440  newfstatat(2, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+2440  lseek(2, 0, SEEK_CUR)             = -1 ESPIPE (Illegal seek)
+2440  write(2, "read returned 5\n", 16) = 16
+2440  close(5)                          = 0
+2440  close(8)                          = 0
+2440  read(7, "83645", 64)              = 5
+2440  newfstatat(2, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+2440  lseek(2, 0, SEEK_CUR)             = -1 ESPIPE (Illegal seek)
+2440  write(2, "read returned 5\n", 16) = 16
+2440  close(7)                          = 0
+2440  close(10)                         = 0
+2440  read(9, "81796", 64)              = 5
+2440  newfstatat(2, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+2440  lseek(2, 0, SEEK_CUR)             = -1 ESPIPE (Illegal seek)
+2440  write(2, "read returned 5\n", 16) = 16
+2440  close(9)                          = 0
+2440  write(1, "Buf = 96469 \nBuf = 86603 \nBuf = "..., 146) = 146
+2440  exit_group(0)                     = ?
+2440  +++ exited with 0 +++

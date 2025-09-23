@@ -1,0 +1,182 @@
+2344  execve("./encdrv", ["./encdrv", "testcases/testcase.2", "output/output.2"], 0x7fff12008788 /* 18 vars */) = 0
+2344  brk(NULL)                         = 0x559f1a2fe000
+2344  arch_prctl(0x3001 /* ARCH_??? */, 0x7ffecb2249f0) = -1 EINVAL (Invalid argument)
+2344  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c51b619b000
+2344  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+2344  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+2344  newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+2344  mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7c51b6193000
+2344  close(3)                          = 0
+2344  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+2344  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+2344  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+2344  pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+2344  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+2344  newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+2344  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+2344  mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7c51b5f6a000
+2344  mprotect(0x7c51b5f92000, 2023424, PROT_NONE) = 0
+2344  mmap(0x7c51b5f92000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7c51b5f92000
+2344  mmap(0x7c51b6127000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7c51b6127000
+2344  mmap(0x7c51b6180000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7c51b6180000
+2344  mmap(0x7c51b6186000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7c51b6186000
+2344  close(3)                          = 0
+2344  mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c51b5f67000
+2344  arch_prctl(ARCH_SET_FS, 0x7c51b5f67740) = 0
+2344  set_tid_address(0x7c51b5f67a10)   = 2344
+2344  set_robust_list(0x7c51b5f67a20, 24) = 0
+2344  rseq(0x7c51b5f680e0, 0x20, 0, 0x53053053) = 0
+2344  mprotect(0x7c51b6180000, 16384, PROT_READ) = 0
+2344  mprotect(0x559f19ee3000, 4096, PROT_READ) = 0
+2344  mprotect(0x7c51b61d5000, 8192, PROT_READ) = 0
+2344  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+2344  munmap(0x7c51b6193000, 29392)     = 0
+2344  pipe2([3, 4], 0)                  = 0
+2344  openat(AT_FDCWD, "testcases/testcase.2", O_RDONLY) = 5
+2344  openat(AT_FDCWD, "output/output.2", O_WRONLY|O_CREAT, 0666) = 6
+2344  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7c51b5f67a10) = 2345
+2344  close(3)                          = 0
+2344  read(5, "372474 execve(\"./encdrv\", [\"./en"..., 1000) = 1000
+2344  write(4, "1000\n", 5)             = 5
+2344  write(4, "372474 execve(\"./encdrv\", [\"./en"..., 1000) = 1000
+2344  read(5, "\\0GNU\\0\\30x\\346\\264ur\\f|Q\\226\\23"..., 1000) = 1000
+2344  write(4, "1000\n", 5)             = 5
+2344  write(4, "\\0GNU\\0\\30x\\346\\264ur\\f|Q\\226\\23"..., 1000) = 1000
+2344  read(5, "6000, 13920, PROT_READ|PROT_WRIT"..., 1000) = 1000
+2344  write(4, "1000\n", 5)             = 5
+2344  write(4, "6000, 13920, PROT_READ|PROT_WRIT"..., 1000 <unfinished ...>
+2345  set_robust_list(0x7c51b5f67a20, 24 <unfinished ...>
+2344  <... write resumed>)              = 1000
+2345  <... set_robust_list resumed>)    = 0
+2344  read(5, "l: encdrv encrypt decrypt\\n\\nenc"..., 1000) = 1000
+2344  write(4, "1000\n", 5 <unfinished ...>
+2345  close(1 <unfinished ...>
+2344  <... write resumed>)              = 5
+2345  <... close resumed>)              = 0
+2344  write(4, "l: encdrv encrypt decrypt\\n\\nenc"..., 1000 <unfinished ...>
+2345  dup(6 <unfinished ...>
+2344  <... write resumed>)              = 1000
+2345  <... dup resumed>)                = 1
+2344  read(5,  <unfinished ...>
+2345  close(0 <unfinished ...>
+2344  <... read resumed>"_READ, MAP_PRIVATE, 6, 0) = 0x7f"..., 1000) = 1000
+2345  <... close resumed>)              = 0
+2344  write(4, "1000\n", 5 <unfinished ...>
+2345  dup(3 <unfinished ...>
+2344  <... write resumed>)              = 5
+2345  <... dup resumed>)                = 0
+2344  write(4, "_READ, MAP_PRIVATE, 6, 0) = 0x7f"..., 1000 <unfinished ...>
+2345  close(4 <unfinished ...>
+2344  <... write resumed>)              = 1000
+2345  <... close resumed>)              = 0
+2344  read(5, "Q\\226\\236i\\253-'o\"..., 68, 880) "..., 1000) = 1000
+2344  write(4, "1000\n", 5)             = 5
+2344  write(4, "Q\\226\\236i\\253-'o\"..., 68, 880) "..., 1000 <unfinished ...>
+2345  execve("./encrypt", ["encrypt"], 0x7ffecb224bd8 /* 18 vars */ <unfinished ...>
+2344  <... write resumed>)              = 1000
+2344  read(5, "    = 0x5580dbf1a000\n372475 brk("..., 1000) = 1000
+2344  write(4, "1000\n", 5)             = 5
+2344  write(4, "    = 0x5580dbf1a000\n372475 brk("..., 1000) = 1000
+2344  read(5, ", \"1\\n\\v\", 3 <unfinished ...>\n37"..., 1000) = 1000
+2344  write(4, "1000\n", 5)             = 5
+2344  write(4, ", \"1\\n\\v\", 3 <unfinished ...>\n37"..., 1000) = 1000
+2344  read(5, "cc encrypt.c -o encrypt\\n\", 4096"..., 1000) = 1000
+2344  write(4, "1000\n", 5)             = 5
+2344  write(4, "cc encrypt.c -o encrypt\\n\", 4096"..., 1000) = 1000
+2344  read(5, "         = 3\n372475 <... read re"..., 1000) = 1000
+2344  write(4, "1000\n", 5 <unfinished ...>
+2345  <... execve resumed>)             = 0
+2344  <... write resumed>)              = 5
+2344  write(4, "         = 3\n372475 <... read re"..., 1000) = 1000
+2344  read(5,  <unfinished ...>
+2345  brk(NULL <unfinished ...>
+2344  <... read resumed>"finished ...>\n372474 <... read r"..., 1000) = 1000
+2345  <... brk resumed>)                = 0x55c38e885000
+2344  write(4, "1000\n", 5)             = 5
+2344  write(4, "finished ...>\n372474 <... read r"..., 1000) = 1000
+2344  read(5, "ead resumed>\"16\\n\", 4096)  = 3\n3"..., 1000) = 1000
+2345  arch_prctl(0x3001 /* ARCH_??? */, 0x7ffd77fd1f80 <unfinished ...>
+2344  write(4, "1000\n", 5 <unfinished ...>
+2345  <... arch_prctl resumed>)         = -1 EINVAL (Invalid argument)
+2344  <... write resumed>)              = 5
+2344  write(4, "ead resumed>\"16\\n\", 4096)  = 3\n3"..., 1000) = 1000
+2345  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+2344  read(5, "21\\177{{8}v{|jn6{85w8}v{|jn\\22\","..., 1000) = 1000
+2345  <... mmap resumed>)               = 0x7aa73cfcf000
+2344  write(4, "1000\n", 5)             = 5
+2345  access("/etc/ld.so.preload", R_OK <unfinished ...>
+2344  write(4, "21\\177{{8}v{|jn6{85w8}v{|jn\\22\","..., 1000 <unfinished ...>
+2345  <... access resumed>)             = -1 ENOENT (No such file or directory)
+2344  <... write resumed>)              = 1000
+2345  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+2344  read(5, "<... write resumed>)            "..., 1000) = 764
+2345  <... openat resumed>)             = 4
+2344  write(4, "764\n", 4 <unfinished ...>
+2345  newfstatat(4, "",  <unfinished ...>
+2344  <... write resumed>)              = 4
+2344  write(4, "<... write resumed>)            "..., 764 <unfinished ...>
+2345  <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+2344  <... write resumed>)              = 764
+2345  mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 4, 0 <unfinished ...>
+2344  read(5, "", 1000)                 = 0
+2345  <... mmap resumed>)               = 0x7aa73cfc7000
+2344  close(5 <unfinished ...>
+2345  close(4 <unfinished ...>
+2344  <... close resumed>)              = 0
+2345  <... close resumed>)              = 0
+2344  close(6)                          = 0
+2345  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+2344  exit_group(0 <unfinished ...>
+2345  <... openat resumed>)             = 4
+2344  <... exit_group resumed>)         = ?
+2345  read(4, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+2345  pread64(4, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+2345  pread64(4,  <unfinished ...>
+2344  +++ exited with 0 +++
+2345  <... pread64 resumed>"\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+2345  pread64(4, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+2345  newfstatat(4, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+2345  pread64(4, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+2345  mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x7aa73cd9e000
+2345  mprotect(0x7aa73cdc6000, 2023424, PROT_NONE) = 0
+2345  mmap(0x7aa73cdc6000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x28000) = 0x7aa73cdc6000
+2345  mmap(0x7aa73cf5b000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x1bd000) = 0x7aa73cf5b000
+2345  mmap(0x7aa73cfb4000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x215000) = 0x7aa73cfb4000
+2345  mmap(0x7aa73cfba000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7aa73cfba000
+2345  close(4)                          = 0
+2345  mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7aa73cd9b000
+2345  arch_prctl(ARCH_SET_FS, 0x7aa73cd9b740) = 0
+2345  set_tid_address(0x7aa73cd9ba10)   = 2345
+2345  set_robust_list(0x7aa73cd9ba20, 24) = 0
+2345  rseq(0x7aa73cd9c0e0, 0x20, 0, 0x53053053) = 0
+2345  mprotect(0x7aa73cfb4000, 16384, PROT_READ) = 0
+2345  mprotect(0x55c38dcec000, 4096, PROT_READ) = 0
+2345  mprotect(0x7aa73d009000, 8192, PROT_READ) = 0
+2345  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+2345  munmap(0x7aa73cfc7000, 29392)     = 0
+2345  newfstatat(0, "", {st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+2345  getrandom("\xe1\xca\xe6\xc9\xb2\x5e\x23\x40", 8, GRND_NONBLOCK) = 8
+2345  brk(NULL)                         = 0x55c38e885000
+2345  brk(0x55c38e8a6000)               = 0x55c38e8a6000
+2345  read(0, "1000\n372474 execve(\"./encdrv\", ["..., 4096) = 4096
+2345  newfstatat(1, "", {st_mode=S_IFREG|0664, st_size=0, ...}, AT_EMPTY_PATH) = 0
+2345  write(1, "1000\n\333\337\332\334\337\334\310\215\220\215\213\236\215\300\312\306\307\215\206\213\214\232\236\312\304\310\263"..., 1005) = 1005
+2345  write(1, "1000\n\264\330\257\246\275\264\330\264\333\330\220\264\333\334\336\264\332\336\334\235\232\264\216\224\271\264\332"..., 1005) = 1005
+2345  write(1, "1000\n\336\330\330\330\304\310\331\333\321\332\330\304\310\270\272\247\274\267\272\255\251\254\224\270\272\247\274"..., 1005) = 1005
+2345  write(1, "1000\n\204\322\310\215\206\213\214\232\236\310\215\206\213\232\221\230\234\310\214\215\213\232\221\230\234\264\206"..., 1005) = 1005
+2345  read(0, "            = 0\n372475 openat(AT"..., 4096) = 4096
+2345  write(1, "1000\n\267\272\255\251\254\304\310\245\251\270\267\270\272\241\276\251\274\255\304\310\336\304\310\330\301\310\325"..., 1005) = 1005
+2345  write(1, "1000\n\271\264\332\332\336\264\332\333\336\201\264\332\335\333\305\317\207\312\306\306\306\304\310\336\320\304\310"..., 1005) = 1005
+2345  write(1, "1000\n\310\310\310\310\325\310\330\220\335\335\320\330\214\212\216\331\211\330\330\330\342\333\337\332\334\337\335"..., 1005) = 1005
+2345  write(1, "1000\n\304\310\312\331\264\206\264\236\312\304\310\333\310\324\235\206\216\201\206\201\233\200\215\214\310\306\306"..., 1005) = 1005
+2345  read(0, "...>\n372474 <... read resumed>\"2"..., 4096) = 4096
+2345  write(1, "1000\n\213\213\310\215\206\213\232\221\230\234\306\213\310\305\207\310\215\206\213\232\221\230\234\264\206\312\304"..., 1005) = 1005
+2345  write(1, "1000\n\310\310\310\310\310\310\310\310\310\325\310\333\342\333\337\332\334\337\335\310\324\306\306\306\310\232\215"..., 1005) = 1005
+2345  write(1, "1000\n\216\201\206\201\233\200\215\214\310\306\306\306\326\342\333\337\332\334\337\334\310\324\306\306\306\310\232"..., 1005) = 1005
+2345  write(1, "1000\n\215\211\214\310\232\215\233\235\205\215\214\326\312\331\336\264\206\312\304\310\334\330\321\336\301\310\310"..., 1005) = 1005
+2345  read(0, "            = 27\n372474 write(6,"..., 4096) = 1545
+2345  write(1, "1000\n\332\331\264\331\337\337\223\223\320\225\236\223\224\202\206\336\223\320\335\237\320\225\236\223\224\202\206"..., 1005) = 1005
+2345  write(1, "764\n\300\322\322\322\334\213\216\225\210\231\334\216\231\217\211\221\231\230\302\325\334\334\334\334\334\334\334\334"..., 768) = 768
+2345  read(0, "", 4096)                 = 0
+2345  exit_group(0)                     = ?
+2345  +++ exited with 0 +++
