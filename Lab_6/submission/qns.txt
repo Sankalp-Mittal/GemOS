@@ -1,0 +1,51 @@
+Part1  
+------
+
+Q1. If you manually run the testcase#1 without performing any modifications, the OS hangs. Explain why?
+
+A1. Because there is no instruction to handle division by zero, the handler will not be able to do anything about the hardware interrupt.
+
+Q2. After building gemOS for testcase#1 (manually), run `objdump -D user/init.o`, examine the assembly for main to 
+    find the `idiv' instruction. Apart from the implicit "rax" register, which other register is used? 
+    Which registers is used as the numerator and which register as the denominator?
+
+A2. numerator is the rax, denominator is the rcx register.
+
+Part 2
+------
+
+Q1. After building gemOS for testcase#2 (manually), run `objdump -D user/init.o`, examine the assembly for main to 
+    find the `idiv' instruction. What is the length of the `idiv' instruction?
+
+A1. 3 * sizeof(u64)
+
+Q2. Can we use the register over-writing strategy for testcase2? why or why not?
+
+A2. No, We are going to require the values stored in the register after the division by 0 error. Hence, we do not require the part 1 register overwriting strategy but the skip instruction strategy.
+
+Q3. Which memory does the `regs' argument to do_div_by_zero (in hack.c) point to (hint: check the os_rsp value in exec_ctx)?
+
+A3. regs argument points to the struct user_regs named regs.
+
+Part 3
+------
+
+Q1. Why testcase#2 should show the output 'Error...exiting'
+
+A1. Because the address, the pointer passed in the handler is pointing to, is not at Code data segment but at the stack.
+
+Part 4
+------
+Q1. What all registers are changed in do_div_by_zero and why?
+
+A1. We change the following registers:
+	1. rax: to store the return value of the function which we are going to skip.
+	2. rsp: to point to the rbp + 16, 16 because we are popping 2 saved long registers.
+	3. rip: to point to the old instruction pointer of the caller function.
+	4. rbp: to point to base address of the caller function's stack.
+
+Q2. In testcase #4 and #5, how many times the 'fact' function would return one?
+
+A2. In testcase #4 there are 3 times the fact function will return one for 5, 3, 1. For 5 and 3 it will raise exceptions. For 1 it is handled separately.
+    In testcase #5 there are 5 times the fact function will return one for 9, 7, 5, 3, 1. For 9, 7, 5 and 3 it will raise exceptions. For 1 it is handled separately.
+
