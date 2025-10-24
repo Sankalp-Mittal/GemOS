@@ -1,0 +1,35 @@
+Part1
+-----
+
+Q1. In testcase1.c, how many times the swapper process got scheduled?
+A1. Swapper process is scheduled a total of 10 times, we are also counting the number of times swapper is scheduled because of time slice (time slice is 1 second).
+
+Q2. In testcase3.c, how many times the swapper process is scheduled and why?
+A2. Swapper is scheduled 7 times. This is because 1 goes to sleep after creating 2 and 3 and then 2 creates 4. 2,3,4 should run the loop for 1 second each and that leaves us with 7 seconds of sleep left for process 1 and hence swapper is scheduled 7 times
+
+Q3. In testcase5.c, how many times the sum value was less than 10 and why?    
+A3. The value was less than 10 2 times, this is because process with pid 4 were created 2 times, once when process 1 was running and it creatred 4 using fork() and then it sleeps for 3 time slices, during which 2 creates process 5,6 and 3 creates process 7, now when 4 will run it will exit since it is the only pid satisfying the conditions. Now when 5 calls fork next it will create a process with pid 4.
+
+Part 2
+------
+
+Q1. In testcase1.c, in which level the page table entries for the two addresses
+for which walk_pt is called, diverge and why?
+A1. The L1 entries are the same so they both use the same L2 table and from there they diverge, this is because the PTE bits for both are the same.
+
+Q2. In testcase2.c, reason about the page table entries at different levels for 
+(ptr+4096) across different invocation of walk_pt. Specifically, differentiate
+the entries w.r.t. the entries corresponding to (ptr)
+A2. The both are initially invalid as no memory is writen so no physical memory is assigned to the virtual pages. (Lazy allocation)
+
+Q3. Explain the gemOS physical memory allocation logic for the user stack
+    region by examining the o/p of testcase4.c.
+A3. gemOS is allocating memory in the by extending the stack and allocating memory for inbetween pages as well when you assign values to some memory location 2 pages above the current stack even the value 1 page below has been assigned some value.
+
+Q4. In testcase5.c, the PFN used to maintain L4 page table for the two addresses
+    are same. (True/False) with justification.
+A4. False, the adress are 209E and 209F respectively.They have different permission bits.
+
+Q5. Which bit is used to maintain the `write' permission for a page? Justify. 
+A5. the 3rd bit is used, since in tc 5 the permission bits only differ by 8 which means the 3rd bit is different in both.
+      
