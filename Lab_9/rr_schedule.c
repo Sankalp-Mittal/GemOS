@@ -105,18 +105,18 @@ int do_walk_pt(struct exec_context *ctx, unsigned long addr)
     for(int i=1; i<=4; i++){
 	//printk("arr[%d]:%x\n",i,arr[i-1]);
     	u64 ofset = arr[i-1];
-	u64 pg_addr = vaddr_base+ofset;
-	u64 contents = *((u64*)pg_addr);
-	if((contents & 0x1) && isValid){
-		u64 physical = (contents & (0xFFFF000)) >> 12;
-		u64 tags = (contents & 0xFFF);
-		printk("L%d-entry addr: %x, L%d-entry contents: %x, PFN: %x, Flags: %x\n", i, pg_addr, i, contents, physical, tags);
-		vaddr_base = (physical << 12);
-	}
-	else{
-		printk("No L%d entry\n",i);
-		isValid = 0;
-	}
+		u64 pg_addr = vaddr_base+ofset;
+		u64 contents = *((u64*)pg_addr);
+		if((contents & 0x1) && isValid){
+			u64 physical = (contents & (0xFFFF000)) >> 12;
+			u64 tags = (contents & 0xFFF);
+			printk("L%d-entry addr: %x, L%d-entry contents: %x, PFN: %x, Flags: %x\n", i, pg_addr, i, contents, physical, tags);
+			vaddr_base = (physical << 12);
+		}
+		else{
+			printk("No L%d entry\n",i);
+			isValid = 0;
+		}
 
     }
 
